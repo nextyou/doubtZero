@@ -22,11 +22,11 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         onClick={toggleDropdown} 
         className="flex items-center text-gray-700 dark:text-gray-400 dropdown-toggle"
       >
-        <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
+        <span className="mr-3 overflow-hidden rounded-full">
           <Image
-            width={44}
-            height={44}
-            src="/images/user/owner.jpg"
+            width={30}
+            height={30}
+              src="/images/logo/logo-icon.svg"
             alt="User"
           />
         </span>
@@ -62,9 +62,7 @@ function toggleDropdown(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
           <span className="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
             AI Tutor
           </span>
-          <span className="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">
-            randomuser@pimjo.com
-          </span>
+          
         </div>
 
         <ul className="flex flex-col gap-1 pt-4 pb-3 border-b border-gray-200 dark:border-gray-800">

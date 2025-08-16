@@ -24,7 +24,7 @@ export default function UserMetaCard() {
               <Image
                 width={80}
                 height={80}
-                src="/images/user/owner.jpg"
+                src="/images/logo/logo-icon.svg"
                 alt="user"
               />
             </div>
@@ -38,7 +38,7 @@ export default function UserMetaCard() {
                 </p>
                 <div className="hidden h-3.5 w-px bg-gray-300 dark:bg-gray-700 xl:block"></div>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Arizona, United States
+                 Darbhanga, Bihar, India - 846001
                 </p>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function UserMetaCard() {
 
                   <div className="col-span-2 lg:col-span-1">
                     <Label>Email Address</Label>
-                    <Input type="text" defaultValue="randomuser@pimjo.com" />
+                    <Input type="text" defaultValue="******@***.com" />
                   </div>
 
                   <div className="col-span-2 lg:col-span-1">
