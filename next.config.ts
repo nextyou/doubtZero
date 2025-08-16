@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
-  output: 'export', // Ensures a static HTML export
+  // output: 'export', // Ensures a static HTML export
   
    
 };

@@ -1,9 +1,8 @@
 "use client";
-
 import Bubble from "@/components/bubble";
  import Select from "@/components/form/Select";
 import Script from "next/script";
-
+import { v4 as uuid } from "uuid";
 import { useEffect, useMemo, useRef, useState } from "react";
 type Role = "user" | "assistant";
 
@@ -17,7 +16,7 @@ type ChatMessage = {
 export default function Page() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      id: crypto.randomUUID(),
+      id: uuid(),
       role: "assistant",
       content: "Hi! I’m your AI tutor. Ask me anything about your course.",
     },
@@ -45,7 +44,7 @@ export default function Page() {
     if (!canSend) return;
 
     const userMsg: ChatMessage = {
-      id: crypto.randomUUID(),
+        id: uuid(),
       role: "user",
       content: input.trim(),
     };
