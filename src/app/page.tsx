@@ -1,34 +1,13 @@
 // app/page.tsx
-
-import TextLogo from "@/components/chat/text-logo";
+import DoubtZeroBanner from "@/components/home/banner";
 import { ArrowRightIcon } from "@/icons";
 import Link from "next/link";
-
- 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+      <DoubtZeroBanner/>
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-b from-indigo-50 to-white">
-        <TextLogo/>
-        <p className="text-lg text-gray-600 max-w-2xl mb-8">
-          Eliminating doubts, 24/7. Your personal AI tutor available anytime, anywhere to help you learn faster and smarter.
-        </p>
-        <div className="flex gap-4">
-          <Link
-            href="/ask-doubts"
-            className="px-6 py-3 bg-indigo-600 text-white rounded-2xl shadow hover:bg-indigo-700 transition"
-          >
-            Ask Doubts
-          </Link>
-          <Link
-            href="#features"
-            className="px-6 py-3 bg-white text-indigo-600 border border-indigo-200 rounded-2xl shadow hover:bg-gray-100 transition"
-          >
-            Learn More
-          </Link>
-        </div>
-      </section>
+     
 
       {/* Features Section */}
       <section id="features" className="py-20 px-6 max-w-6xl mx-auto">
@@ -54,7 +33,74 @@ export default function Home() {
               From Math to Science to Programming — get help across multiple domains.
             </p>
           </div>
+           <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Multi Languages Support</h3>
+            <p className="text-gray-600">
+              Get answers in multiple languages including Hindi, English, and more.
+            </p>
+          </div>
+            <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">Cost Effective</h3>
+              <p className="text-gray-600">
+                Affordable pricing plans to suit every student&apos;s budget.
+              </p>  
+            </div>
+            <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold mb-2">Safe and Secure</h3>
+              <p className="text-gray-600">
+                Your data privacy is our top priority. We ensure secure interactions.
+              </p>  
         </div>
+        </div>
+      </section>
+        {/* Features Section */}
+      <section id="features" className="py-20 px-6 w-full border-t  bg-gradient-to-b from-indigo-50 to-white">
+        <div className="max-w-6xl mx-auto text-center mb-12">
+           <h2 className="text-3xl font-semibold text-center mb-12">
+          Features at a Glance
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Customizable Answer Types</h3>
+            <p className="text-gray-600">
+              Choose from short answers, detailed explanations, or summaries to fit your learning needs.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Class and Subject Filters</h3>
+            <p className="text-gray-600">
+              Filter responses based on your class level and subject for more relevant answers.
+            </p>
+            </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Interactive Chat Interface</h3>
+            <p className="text-gray-600">
+              User-friendly chat interface that makes asking questions and receiving answers easy and intuitive.
+            </p> 
+            </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Progress Tracking</h3>
+            <p className="text-gray-600">
+              Keep track of your learning journey with saved chat histories and progress metrics.
+            </p> 
+            </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Multi-Device Sync</h3>
+            <p className="text-gray-600">
+              Access your doubts and answers across all your devices seamlessly.
+            </p> 
+            </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Expert-Reviewed Content</h3>
+            <p className="text-gray-600">
+              Answers are continuously improved and reviewed by educational experts to ensure accuracy.
+            </p>
+            </div>
+          
+        </div>
+          </div>
+
+       
       </section>
 
       {/* CTA Section */}
