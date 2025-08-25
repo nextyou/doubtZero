@@ -1,9 +1,11 @@
+// app/chat/page.tsx
 "use client";
 import Bubble from "@/components/chat/bubble";
 import Select from "@/components/form/Select";
 import Script from "next/script";
 import { v4 as uuid } from "uuid";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 export type Role = "user" | "assistant" | "developer";
 
 type ChatMessage = {
@@ -167,77 +169,44 @@ export default function Page() {
 
 
   return (
-    <div>
-      <Script src="https://js.puter.com/v2/" strategy="afterInteractive" />
-      <div className="flex flex-col gap-2 mb-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-800 dark:text-white/90">
-            Ask Doubts -  <span className="text-sm text-gray-600">Eliminating doubts, 24/7.</span>
-          </h3>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+    
+        <h1 className="text-5xl font-bold tracking-tight mb-6">
+         <Link href={'/'}> doubt<span className="text-indigo-600">Zero</span></Link>
+        </h1> 
+    
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow p-6 flex flex-col space-y-4">
+        <div className="flex-1 overflow-y-auto h-80  p-3 space-y-2">
+          {messages.map((m, i) => (
+            <div
+              key={i}
+              className={`p-2 rounded-xl max-w-[80%] ${
+                m.role === "user"
+                  ? "bg-indigo-100 text-indigo-800 ml-auto"
+                  : "bg-gray-200 text-gray-800 mr-auto"
+              }`}
+            >
+              {m.content}
+            </div>
+          ))}
         </div>
-        <div className="flex items-center gap-3">
-
-          <div>
-            <Select
-              options={answerTypes}
-              placeholder="Answer Type"
-              onChange={setAnswerType}
-              className="dark:bg-dark-900"
-              defaultValue={answerType}
-            />
-          </div>
-          <div>
-            <Select
-              options={classes}
-              placeholder="Select class"
-              onChange={setActiveClass}
-              className="dark:bg-dark-900"
-              defaultValue={activeClass}
-            />
-          </div>
-          <div>
-            <Select
-              options={subjects}
-              placeholder="Select subject"
-              onChange={setActiveSubject}
-              className="dark:bg-dark-900"
-              defaultValue={activeSubject}
-            />
-          </div>
-
+        <div className="flex gap-2">
+          <input
+            type="text"
+            className="flex-1 border rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            placeholder="Type your doubt..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && onSend()}
+          />
+          <button
+            onClick={onSend}
+            className="px-5 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700"
+          >
+            Send
+          </button>
         </div>
       </div>
-      <div
-        ref={containerRef}
-        className="h-[60vh] w-full overflow-y-auto rounded-2xl border border-gray-200 bg-white p-4 shadow-sm"
-      >
-        {messages.map((m) => (
-          <Bubble key={m.id} role={m.role} content={m.content} />
-        ))}
-      </div>
-
-      <div className="mt-4 flex items-center gap-2">
-        <input
-          className="flex-1 rounded-2xl border border-gray-300 bg-white px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Ask me anything…"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={onKeyDown}
-          disabled={loading}
-        />
-        <button
-          onClick={onSend}
-          disabled={!canSend}
-          className="rounded-2xl px-4 py-3 font-medium text-white shadow-sm transition enabled:bg-blue-600 enabled:hover:bg-blue-700 disabled:bg-gray-300"
-        >
-          {loading ? "Thinking…" : "Send"}
-        </button>
-      </div>
-
-      <p className="mt-3 text-xs text-gray-500">
-        Your content is only used at runtime to answer your question; no data is
-        stored on the server in this demo.
-      </p>
     </div>
   );
 }

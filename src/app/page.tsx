@@ -1,41 +1,84 @@
-import SignInForm from "@/components/auth/SignInForm";
-import GridShape from "@/components/common/GridShape";
-import ThemeTogglerTwo from "@/components/common/ThemeTogglerTwo";
-import { ThemeProvider } from "@/context/ThemeContext";
-import Link from "next/link";
-import Image from "next/image";
- 
+// app/page.tsx
 
-export default function SignIn() {
-    return (
-    <div className="relative p-6 bg-white z-1 dark:bg-gray-900 sm:p-0">
-      <ThemeProvider>
-        <div className="relative flex lg:flex-row w-full h-screen justify-center flex-col  dark:bg-gray-900 sm:p-0">
-         <SignInForm/>
-          <div className="lg:w-1/2 w-full h-full bg-brand-950 dark:bg-white/5 lg:grid items-center hidden">
-            <div className="relative items-center justify-center  flex z-1">
-              {/* <!-- ===== Common Grid Shape Start ===== --> */}
-              <GridShape />
-              <div className="flex flex-col items-center max-w-xs">
-                <Link href="/" className="block mb-4">
-                  <Image
-                    width={231}
-                    height={48}
-                    src="/images/logo/logo.png"
-                    alt="Logo"
-                  />
-                </Link>
-                <p className="text-center text-gray-400 dark:text-white/60">
-                  Welcome to DoubtZero, your trusted platform for resolving doubts and queries. Experience instant support and expert solutions at your fingertips, anytime, anywhere.
-                </p>
-              </div>
-            </div>
+import TextLogo from "@/components/chat/text-logo";
+import { ArrowRightIcon } from "@/icons";
+
+ 
+export default function Home() {
+  return (
+    <main className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-b from-indigo-50 to-white">
+        <TextLogo/>
+        <p className="text-lg text-gray-600 max-w-2xl mb-8">
+          Eliminating doubts, 24/7. Your personal AI tutor available anytime, anywhere to help you learn faster and smarter.
+        </p>
+        <div className="flex gap-4">
+          <a
+            href="/ask-doubts"
+            className="px-6 py-3 bg-indigo-600 text-white rounded-2xl shadow hover:bg-indigo-700 transition"
+          >
+            Try Chatbot
+          </a>
+          <a
+            href="#features"
+            className="px-6 py-3 bg-white text-indigo-600 border border-indigo-200 rounded-2xl shadow hover:bg-gray-100 transition"
+          >
+            Learn More
+          </a>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Why Choose doubt<span className="text-indigo-600">Zero</span>?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">24/7 Availability</h3>
+            <p className="text-gray-600">
+              Ask your doubts anytime, day or night, and get instant explanations powered by AI.
+            </p>
           </div>
-          <div className="fixed bottom-6 right-6 z-50 hidden sm:block">
-            <ThemeTogglerTwo />
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Personalized Learning</h3>
+            <p className="text-gray-600">
+              Adaptive responses tailored to your subject, learning speed, and style.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-semibold mb-2">Multi-Subject Support</h3>
+            <p className="text-gray-600">
+              From Math to Science to Programming — get help across multiple domains.
+            </p>
           </div>
         </div>
-      </ThemeProvider>
-    </div>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        id="get-started"
+        className="py-20 px-6 text-center bg-indigo-600 text-white"
+      >
+        <h2 className="text-3xl font-bold mb-6">
+          Ready to eliminate your doubts?
+        </h2>
+        <p className="text-lg mb-8">
+          Join thousands of students already using doubtZero to learn smarter.
+        </p>
+        <a
+          href="/ask-doubts"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 font-semibold rounded-2xl shadow hover:bg-gray-100 transition"
+        >
+          Get Started Free <ArrowRightIcon className="w-5 h-5" />
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-6 text-center text-gray-500 text-sm border-t">
+        © {new Date().getFullYear()} doubtZero. All rights reserved.
+      </footer>
+    </main>
   );
 }
