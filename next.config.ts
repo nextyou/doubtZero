@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     });
     return config;
   },
+  trailingSlash: true,
   output: 'export', // Ensures a static HTML export
 };
 export default nextConfig;

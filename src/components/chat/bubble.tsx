@@ -1,4 +1,4 @@
-import { Role } from "@/app/(admin)/ask-doubts/page";
+import { Role } from "@/app/ask-doubts/page";
 function Bubble({
   role,
   content,

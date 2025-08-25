@@ -1,7 +1,6 @@
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
 import RecentDoubts from "@/components/ecommerce/RecentDoubts";
 import React from "react";
- 
 export default function BasicTables() {
   return (
     <div>
