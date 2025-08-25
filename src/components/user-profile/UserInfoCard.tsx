@@ -1,7 +1,5 @@
 "use client";
-import React from "react"; 
-import Language from "../chat/language-selection";
-import SchoolBoards from "../chat/school-boards";
+import React from "react";  
 export default function UserInfoCard() {
  
   return (
@@ -47,11 +45,7 @@ export default function UserInfoCard() {
               <p className="text-sm font-medium text-gray-800 dark:text-white/90">
                 +91 9716769950
               </p>
-            </div>
-
-            
-            <Language/>
-            <SchoolBoards/>
+            </div> 
           </div>
         </div>
 
