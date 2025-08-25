@@ -18,7 +18,7 @@ export default function Home() {
             href="/ask-doubts"
             className="px-6 py-3 bg-indigo-600 text-white rounded-2xl shadow hover:bg-indigo-700 transition"
           >
-            Try Chatbot
+            Ask Doubts
           </a>
           <a
             href="#features"
