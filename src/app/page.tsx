@@ -2,6 +2,7 @@
 
 import TextLogo from "@/components/chat/text-logo";
 import { ArrowRightIcon } from "@/icons";
+import Link from "next/link";
 
  
 export default function Home() {
@@ -14,18 +15,18 @@ export default function Home() {
           Eliminating doubts, 24/7. Your personal AI tutor available anytime, anywhere to help you learn faster and smarter.
         </p>
         <div className="flex gap-4">
-          <a
+          <Link
             href="/ask-doubts"
             className="px-6 py-3 bg-indigo-600 text-white rounded-2xl shadow hover:bg-indigo-700 transition"
           >
             Ask Doubts
-          </a>
-          <a
+          </Link>
+          <Link
             href="#features"
             className="px-6 py-3 bg-white text-indigo-600 border border-indigo-200 rounded-2xl shadow hover:bg-gray-100 transition"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -67,12 +68,12 @@ export default function Home() {
         <p className="text-lg mb-8">
           Join thousands of students already using doubtZero to learn smarter.
         </p>
-        <a
+        <Link
           href="/ask-doubts"
           className="inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 font-semibold rounded-2xl shadow hover:bg-gray-100 transition"
         >
-          Get Started Free <ArrowRightIcon className="w-5 h-5" />
-        </a>
+          Get Started Free <ArrowRightIcon />
+        </Link>
       </section>
 
       {/* Footer */}
