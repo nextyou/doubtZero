@@ -11,8 +11,7 @@ import {
   GridIcon,
   HorizontaLDots, 
   PieChartIcon,
-  PlugInIcon,
-  TaskIcon, 
+  PlugInIcon, 
 } from "../icons/index";
   
 type NavItem = {
