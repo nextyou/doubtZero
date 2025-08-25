@@ -12,7 +12,7 @@ import {
   HorizontaLDots, 
   PieChartIcon,
   PlugInIcon,
-  TableIcon, 
+  TaskIcon, 
 } from "../icons/index";
   
 type NavItem = {
@@ -34,9 +34,9 @@ const navItems: NavItem[] = [
     path: "/dashboard",
   }, 
    {
-    name: "My Doubts",
-    icon: <TableIcon />,
-   path: "/my-doubts"
+    name: "Settings",
+    icon: <GridIcon/>,
+   path: "/profile"
   },
    {
     name: "Ask Doubt",

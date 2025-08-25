@@ -10,15 +10,15 @@ const outfit = Outfit({
 });
 export const metadata: Metadata = {
   title:
-    "DoubtZero || Eliminating doubts, 24/7",
+    "doubtZero || Eliminating doubts, 24/7",
   description:
-    "DoubtZero is your go-to platform for resolving doubts and queries, anytime, anywhere. Experience instant support and expert solutions at your fingertips.",
+    "doubtZero is your go-to platform for resolving doubts and queries, anytime, anywhere. Experience instant support and expert solutions at your fingertips.",
   openGraph: {
-    title: "DoubtZero || Eliminating doubts, 24/7.",
+    title: "doubtZero || Eliminating doubts, 24/7.",
     description:
-      "DoubtZero is your go-to platform for resolving doubts and queries, anytime, anywhere. Experience instant support and expert solutions at your fingertips.",
+      "doubtZero is your go-to platform for resolving doubts and queries, anytime, anywhere. Experience instant support and expert solutions at your fingertips.",
     url: "https://doubtzero.com",
-    siteName: "DoubtZero"
+    siteName: "doubtZero"
   }
 }
 export default function RootLayout({

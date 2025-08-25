@@ -30,7 +30,7 @@ export default function AuthLayout({
                   />
                 </Link>
                 <p className="text-center text-gray-400 dark:text-white/60">
- Welcome to DoubtZero, your trusted platform for resolving doubts and queries. Experience instant support and expert solutions at your fingertips, anytime, anywhere.
+ Welcome to doubtZero, your trusted platform for resolving doubts and queries. Experience instant support and expert solutions at your fingertips, anytime, anywhere.
 
                 </p>
               </div>
